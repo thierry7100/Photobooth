@@ -1,0 +1,18 @@
+[Unit]
+Description=Photobooth service
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/photobooth/
+ExecStart=/home/pi/photobooth/PhotoBooth_3Img_mariage.py
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+

@@ -1,0 +1,17 @@
+[Unit]
+Description=Shutdown button service
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/tmp
+ExecStart=/home/pi/photobooth/listen-for-shutdown.py
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+
+
